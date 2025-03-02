@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Parser & Renderer</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Markdown Parser & Renderer</h1>
+    <button id="toc-toggle" class="toc-toggle" aria-label="Toggle Table of Contents">
+      <span class="hamburger"></span>
+    </button>
+  </header>
+
+  <main class="container">
+    <!-- Table of Contents Sidebar -->
+    <aside id="toc-sidebar" class="toc">
+      <h2>Table of Contents</h2>
+      <div id="toc-container"></div>
+    </aside>
+
+    <!-- Split-screen Layout -->
+    <div class="split-container">
+      <!-- Editor Section -->
+      <section class="editor-section">
+        <h2>Markdown Editor</h2>
+        <textarea id="markdown-editor" spellcheck="false" placeholder="Write your Markdown here..."></textarea>
+      </section>
+
+      <!-- Preview Section -->
+      <section class="preview-section">
+        <h2>Preview</h2>
+        <div id="preview" class="preview-content"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Built with TypeScript - No external libraries</p>
+  </footer>
+
+  <script src="dist/index.js"></script>
+</body>
+</html>
