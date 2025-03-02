@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Parser & Renderer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Markdown Parser & Renderer</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Sidebar with TOC -->
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2>Table of Contents</h2>
+                    <button id="toc-toggle" aria-label="Toggle TOC">
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                </div>
+                <div id="toc-content">
+                    <p>No headings found</p>
+                </div>
+                
+                <!-- Parser Options -->
+                <div class="options-section">
+                    <h3>Parser Options</h3>
+                    <form id="options-form">
+                        <div class="option-item">
+                            <input type="checkbox" id="generate-toc" name="generateTOC" checked>
+                            <label for="generate-toc">Generate Table of Contents</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="syntax-highlight" name="syntaxHighlight" checked>
+                            <label for="syntax-highlight">Syntax Highlighting</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="external-links" name="externalLinksNewTab" checked>
+                            <label for="external-links">Open External Links in New Tab</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="collapsible-sections" name="enableCollapsibleSections" checked>
+                            <label for="collapsible-sections">Enable Collapsible Sections</label>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+
+            <!-- Main content area -->
+            <div class="content-area">
+                <div class="editor-pane">
+                    <h2>Markdown Input</h2>
+                    <textarea id="markdown-input" placeholder="Enter your Markdown here..."></textarea>
+                </div>
+                <div class="preview-pane">
+                    <h2>Rendered Output</h2>
+                    <div id="markdown-output" class="preview-content"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Standalone Markdown Parser & Renderer in TypeScript</p>
+    </footer>
+
+    <script src="dist/index.js"></script>
+</body>
+</html>
