@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Markdown Parser and Renderer</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="container">
+    <!-- Sidebar for Table of Contents -->
+    <aside id="sidebar">
+      <h2>Table of Contents</h2>
+      <div id="toc" class="toc-collapsible"></div>
+    </aside>
+
+    <!-- Main content area: editor and rendered output -->
+    <main id="main-content">
+      <div id="editor-container">
+        <h2>Markdown Editor</h2>
+        <textarea id="markdown-editor" placeholder="Enter Markdown here..."></textarea>
+      </div>
+      <div id="output-container">
+        <h2>Rendered Output</h2>
+        <div id="rendered-output"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Compiled JavaScript -->
+  <script src="dist/index.js"></script>
+</body>
+</html>

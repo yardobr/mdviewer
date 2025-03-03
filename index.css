@@ -1,0 +1,164 @@
+/* index.css */
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Layout */
+#container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar for Table of Contents */
+#sidebar {
+  background: #fff;
+  width: 250px;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+#sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.toc-collapsible ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-collapsible li {
+  margin: 5px 0;
+}
+
+.toc-link {
+  text-decoration: none;
+  color: #0077cc;
+  cursor: pointer;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+/* Main content area */
+#main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Editor and Output containers split vertically */
+#editor-container,
+#output-container {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+#editor-container {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Markdown Editor */
+#markdown-editor {
+  width: 100%;
+  height: calc(100% - 40px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Rendered Output */
+#rendered-output {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+}
+
+/* Collapsible sections */
+.collapsible .collapse-content {
+  display: block;
+}
+
+.collapsible .collapse-content.collapsed {
+  display: none;
+}
+
+/* Code blocks and "copy code" button */
+.code-block {
+  position: relative;
+  background: #282c34;
+  color: #abb2bf;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: auto;
+}
+
+.code-block code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #61dafb;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-code-button:hover {
+  background: #4fc3f7;
+}
+
+/* Syntax highlighting for keywords */
+.syntax-keyword {
+  color: #c678dd;
+  font-weight: bold;
+}
+
+/* Expandable images */
+img.expandable {
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+img.expandable.expanded {
+  transform: scale(1.5);
+  z-index: 1000;
+  position: relative;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    height: 150px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #main-content {
+    flex: 1;
+  }
+}
