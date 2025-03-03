@@ -1,0 +1,182 @@
+ /* index.css */
+ body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+ }
+
+ .container {
+  display: flex;
+  height: 100vh;
+ }
+
+ .sidebar {
+  width: 200px;
+  background-color: #eee;
+  padding: 20px;
+  overflow-y: auto;
+ }
+
+ .sidebar h2 {
+  margin-top: 0;
+ }
+
+ .editor {
+  flex: 1;
+  padding: 20px;
+ }
+
+ .editor textarea {
+  width: 100%;
+  height: 95%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: none;
+ }
+
+ .viewer {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 1px solid #ccc;
+ }
+
+ .viewer h1,
+ .viewer h2,
+ .viewer h3,
+ .viewer h4,
+ .viewer h5,
+ .viewer h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+ }
+
+ .viewer p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+ }
+
+ .viewer blockquote {
+  border-left: 5px solid #ccc;
+  padding-left: 1em;
+  font-style: italic;
+ }
+
+ .viewer ul,
+ .viewer ol {
+  padding-left: 2em;
+  margin-bottom: 1em;
+ }
+
+ .viewer li {
+  margin-bottom: 0.5em;
+ }
+
+ .viewer code {
+  background-color: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: monospace;
+ }
+
+ .viewer pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  overflow-x: auto;
+  font-family: monospace;
+ }
+
+ .code-block {
+  position: relative;
+ }
+
+ .code-block button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+ }
+
+ .code-block button:hover {
+  background-color: #3e8e41;
+ }
+
+ .viewer hr {
+  border: none;
+  border-top: 3px double #ccc;
+  margin: 2em 0;
+ }
+
+ .viewer img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+ }
+
+ .viewer img.expanded {
+  transform: scale(1.5);
+ }
+
+ /* Syntax highlighting */
+ .keyword {
+  color: blue;
+ }
+
+ .number {
+  color: red;
+ }
+
+ .string {
+  color: green;
+ }
+
+ .comment {
+  color: gray;
+ }
+
+ /* Collapsible sections */
+ details {
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+ }
+
+ details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+ }
+
+ /* Responsive design */
+ @media (max-width: 768px) {
+  .container {
+   flex-direction: column;
+  }
+
+  .sidebar {
+   width: 100%;
+   height: auto;
+   border-bottom: 1px solid #ccc;
+  }
+
+  .editor,
+  .viewer {
+   width: 100%;
+  }
+ }
